@@ -33,10 +33,5 @@ services:
 
 
 volumes:
-  coolify-db:
-    name: coolify-db
-    driver_opts:
-      type: none
-      device: /data/coolify_data/db
-      o: bind
+  - coolify-db:/data/coolify_data/db
 
