@@ -29,3 +29,14 @@ services:
       - "3307:3306"
     volumes:
       - ./mysql:/var/lib/mysql
+      - coolify-db:/var/lib/mysql
+
+
+volumes:
+  coolify-db:
+    name: coolify-db
+    driver_opts:
+      type: none
+      device: /data/coolify_data/db
+      o: bind
+
