@@ -5,15 +5,15 @@ services:
     image: "helloworld:1.0"
     container_name: hello_world
     ports:
-      - "3030:3030"
+      - "3031:3030"
 
   nginx:
     build: ./nginx
     image: "custom_nginx:1.22.1"
     container_name: custom_nginx
     ports:
-      - "80:80"
-      - "443:443"
+      - "81:80"
+      - "444:443"
     restart: always
     network_mode: "host"
     depends_on:
